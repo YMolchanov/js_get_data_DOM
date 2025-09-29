@@ -4,7 +4,7 @@
 const populationElements = document.querySelectorAll('.population');
 
 const populations = [...populationElements].map((el) => {
-  const text = el.textContent.replace(/,/g, '');
+  const text = el.textContent.split(',').join('');
 
   return Number(text);
 });
